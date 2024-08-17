@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  server:
+    build: ./server
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - MONGODB_CONNECTION_STRING=mongodb+srv://new-user_1:IpTpPwsbzxwHUjd9@test.qdrzqq2.mongodb.net/gpnitstart?retryWrites=true&w=majority
+    volumes:
+      - ./server:/app
+
+  client:
+    build: ./client
+    ports:
+      - "8085:8085"
+    environment:
+      - VITE_API_URL=http://127.0.0.1:4000/api/
+    volumes:
+      - ./client:/app
+    depends_on:
+      - server

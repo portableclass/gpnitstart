@@ -1,0 +1,15 @@
+{
+    "files.eol": "\n",
+    "editor.formatOnType": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
+
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "src/assets/styles/css"
+        }
+    ],
+}
